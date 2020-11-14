@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blip</title>
+</head>
+<style>
+body.blip {
+  background-color: #222;
+  color: #ddd
+}
+body.blup {
+  background-color: #ddd;
+  color: #222;
+}
+body>div {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: min(24vh, 12vw);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+</style>
+<body>
+  <div>
+    <h1>
+      blup
+    </h1>
+  </div>
+</body>
+<script>
+const hosts = [
+  'bliblup.fun',
+  'blublip.fun',
+]
+const index = hosts.indexOf(location.hostname)
+
+document.querySelector('body').className =
+document.querySelector('h1').innerText = {
+  '-1': 'blipblup',
+  '0': 'blip',
+  '1': 'blup',
+}[index]
+
+setTimeout(() => {
+  window.location = hosts[+!index]
+})
+</script>
+</html>
