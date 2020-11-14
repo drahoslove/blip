@@ -5,6 +5,12 @@
   <title></title>
 </head>
 <style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
 body.blip {
   background-color: #222;
   color: #ddd
@@ -25,6 +31,18 @@ h1 {
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
 }
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: 1em;
+  color: #888;
+  font-size: 90%;
+}
+footer a {
+  color: #888;
+}
 </style>
 <body>
   <div>
@@ -32,6 +50,7 @@ h1 {
       blup
     </h1>
   </div>
+  <footer>by <a href="https://draho.cz">draho.cz</a></footer>
 </body>
 <script>
 const hosts = [
@@ -47,7 +66,7 @@ document.querySelector('h1').innerText = {
   '1': 'blup',
 }[index]
 
-setTimeout(() => {
+index >=0 && setTimeout(() => {
   window.location = `${location.protocol}//${hosts[+!index]}`
 }, 2000)
 </script>
