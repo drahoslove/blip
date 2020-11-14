@@ -48,7 +48,7 @@ document.querySelector('h1').innerText = {
 }[index]
 
 setTimeout(() => {
-  window.location = hosts[+!index]
-})
+  window.location = `${location.protocol}//${hosts[+!index]}`
+}, 2000)
 </script>
 </html>
