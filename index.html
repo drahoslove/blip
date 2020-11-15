@@ -56,7 +56,6 @@ footer a {
 <body>
   <div>
     <h1>
-      blup
     </h1>
   </div>
   <footer>by <a href="https://draho.cz">draho.cz</a></footer>
@@ -97,7 +96,7 @@ if (isInFrame()) {
 
   const timeout = (index >= 0) && setTimeout(() => {
     window.location = opositeHost
-  }, 2000)
+  }, 2000-Date.now()%1000)
   
   window.onmessage = ({ data, origin }) => {
     console.log('ms', data, origin)
